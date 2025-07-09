@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkyCast Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="weather-container">
+    <h1>🌦️ SkyCast</h1>
+    <p class="caption">Real-time weather at your fingertips</p>
+
+    <div class="controls">
+      <button id="fetchBtn" class="primary-btn">Show Weather</button>
+      <label class="unit-select">
+        <input type="radio" name="unit" id="celsius" value="metric" checked> °C
+      </label>
+      <label class="unit-select">
+        <input type="radio" name="unit" id="fahrenheit" value="imperial"> °F
+      </label>
+    </div>
+
+    <div id="loading" class="spinner"></div>
+
+    <div class="weather-info">
+      <img id="icon" src="icons/default.png" alt="Weather Icon">
+      <div class="data-box">
+        <div class="item"><span>📍</span> <span id="location">---</span></div>
+        <div class="item"><span>🌡️</span> <span id="temperature">---</span></div>
+        <div class="item"><span>☁️</span> <span id="description">---</span></div>
+        <div class="item"><span>💬</span> <span id="todayText">---</span></div> 
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
